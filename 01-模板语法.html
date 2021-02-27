@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="./vue.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="box">
+        {{10+20}}
+        <p>{{myname}}</p>
+        <br/>
+        {{myhtml}}
+        <br/>
+        {{10>20?"aaa":"bbb"}}
+        <!-- 指令 -->
+        <div v-html="myhtml"></div>
+        <div v-show="isShow">动态显示和隐藏</div>
+        <div v-if="isCreated">动态的创建和删除</div>
+    </div>
+    <div>
+        {{10+20}}
+    </div>
+    <script>
+       var vm = new Vue({
+            el:"#box", //vue 渲染开始的地方
+            data:{
+                myname:"dage",
+                myhtml:"<b>dagegegegesss</b>",
+                isShow:true,
+                isCreated:true
+            }// 状态
+       })
+    </script>
+</body>
+</html>
